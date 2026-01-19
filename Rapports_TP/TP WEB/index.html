@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>
+        TP2
+    </title>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>LearnSite</h1>
+                </div>
+                <nav class="nav" role="navigation" aria-label="Menu principal">
+                    <ul class="nav-list">
+                        <li class="nav-item"><a href="#accueil">Accueil</a></li>
+                        <li class="nav-item"><a href="#ateliers">Ateliers</a></li>
+                        <li class="nav-item"><a href="#inscription">Inscription</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <section class="hero" id="accueil">
+        <div class="container">
+            <div class="hero-content">
+                <div class="text-hero">
+                    <p class="hero-subtitle">Découvrir</p>
+                    <h2 class="hero-title">Nos ateliers <span class="accent-text">inédits</span></h2>
+                    <p class="hero-description">Formations pratiques spécialisées pour étudiants en informatique</p>
+                    <a href="#inscription" class="btn btn-primary">Nous rejoindre</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <main class="main">
+        <div class="container">
+            <div class="main-content">
+                <section class="workshops" id="ateliers">
+                    <h2 class="section-title">Nos Ateliers</h2>
+                    <div class="table-container">
+                        <table class="workshops-table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Titre</th>
+                                    <th scope="col">Durée</th>
+                                    <th scope="col">Niveau</th>
+                                    <th scope="col">Prix</th>
+                                    <th scope="col">Date</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="workshop-row">
+                                    <td>Développement Web Full Stack</td>
+                                    <td>3 jours (18 heures)</td>
+                                    <td><span class="level level-intermediate">Intermédiaire</span></td>
+                                    <td class="price">450 dhs</td>
+                                    <td>22 décembre 2025</td>
+                                </tr>
+                                <tr class="workshop-row">
+                                    <td>Introduction à l'Intelligence Artificielle</td>
+                                    <td>2 jours (12 heures)</td>
+                                    <td><span class="level level-beginner">Débutant</span></td>
+                                    <td class="price">300 dhs</td>
+                                    <td>30 Novembre 2025</td>
+                                </tr>
+                                <tr class="workshop-row">
+                                    <td>Sécurité Informatique et Cybersécurité</td>
+                                    <td>2 jours (12 heures)</td>
+                                    <td><span class="level level-intermediate">Intermédiaire</span></td>
+                                    <td class="price">350 dhs</td>
+                                    <td>17 décembre 2025</td>
+                                </tr>
+                                <tr class="workshop-row">
+                                    <td>Développement d'Applications Mobiles</td>
+                                    <td>3 jours (18 heures)</td>
+                                    <td><span class="level level-intermediate">Intermédiaire</span></td>
+                                    <td class="price">400 dhs</td>
+                                    <td>19 novembre 2025</td>
+                                </tr>
+                                <tr class="workshop-row">
+                                    <td>Cloud Computing avec AWS</td>
+                                    <td>2 jours (12 heures)</td>
+                                    <td><span class="level level-advanced">Avancé</span></td>
+                                    <td class="price">500 dhs</td>
+                                    <td>26 janvier 2026</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+                <section class="signup-form" id="inscription">
+                    <h2 class="section-title">Formulaire d'Inscription</h2>
+                    <form class="form" action="#" method="post" novalidate>
+                        <fieldset class="form-fieldset">
+                            <legend class="form-legend">Informations Personnelles</legend>
+                            
+                            <div class="form-group">
+                                <label for="prenom" class="form-label required">Prénom</label>
+                                <input type="text" id="prenom" name="prenom" class="form-input" 
+                                        placeholder="Votre prénom" required>
+                                <small class="form-help">Minimum 2 caractères</small>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="nom" class="form-label required">Nom</label>
+                                <input type="text" id="nom" name="nom" class="form-input" 
+                                        placeholder="Votre nom" required>
+                                <small class="form-help">Minimum 2 caractères</small>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email" class="form-label required">Email</label>
+                                <input type="email" id="email" name="email" class="form-input" 
+                                        placeholder="exemple@email.com" required>
+                                <small class="form-help">Format valide requis</small>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="birthday" class="form-label required">Date de naissance</label>
+                                <input type="date" id="birthday" name="birthday" class="form-input" 
+                                        min="1950-01-01" max="2010-12-31" required
+                                        title="Vous devez avoir au moins 15 ans">
+                                <small class="form-help">Vous devez avoir au moins 15 ans</small>
+                            </div>
+                            
+                            <div class="form-group">
+                                <span class="form-label">Genre</span>
+                                <div class="radio-group">
+                                    <div class="radio-item">
+                                        <input type="radio" id="male" name="gender" value="homme" checked>
+                                        <label for="male">Homme</label>
+                                    </div>
+                                    <div class="radio-item">
+                                        <input type="radio" id="female" name="gender" value="femme">
+                                        <label for="female">Femme</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <fieldset class="form-fieldset">
+                            <legend class="form-legend">Choix d'Ateliers</legend>
+                            
+                            <div class="form-group">
+                                <span class="form-label required">Ateliers souhaités</span>
+                                <div class="checkbox-group">
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="atelier-web" name="ateliers" value="web">
+                                        <label for="atelier-web">Développement Web Full Stack</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="atelier-ia" name="ateliers" value="ia">
+                                        <label for="atelier-ia">Intelligence Artificielle</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="atelier-securite" name="ateliers" value="securite">
+                                        <label for="atelier-securite">Sécurité Informatique</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="atelier-mobile" name="ateliers" value="mobile">
+                                        <label for="atelier-mobile">Applications Mobiles</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="atelier-cloud" name="ateliers" value="cloud">
+                                        <label for="atelier-cloud">Cloud Computing</label>
+                                    </div>
+                                </div>
+                                <small class="form-help">Sélectionnez au moins un atelier</small>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="niveau" class="form-label required">Niveau d'expérience</label>
+                                <select id="niveau" name="niveau" class="form-select" required>
+                                    <option value="">Sélectionnez votre niveau</option>
+                                    <option value="debutant">Débutant</option>
+                                    <option value="intermediaire">Intermédiaire</option>
+                                    <option value="avance">Avancé</option>
+                                </select>
+                                <small class="form-help">Pour mieux adapter la formation</small>
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="form-fieldset">
+                            <legend class="form-legend">Documents (Optionnel)</legend>
+                            
+                            <div class="form-group">
+                                <label for="justificatif" class="form-label">Justificatif étudiant</label>
+                                <input type="file" id="justificatif" name="justificatif" 
+                                        class="form-file" accept=".pdf,.jpg,.png,.jpeg">
+                                <small class="form-help">Formats acceptés: PDF, JPG, PNG (max. 5MB)</small>
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="form-fieldset">
+                            <legend class="form-legend">Commentaire</legend>
+                            
+                            <div class="form-group">
+                                <label for="commentaire" class="form-label">Votre message</label>
+                                <textarea id="commentaire" name="commentaire" class="form-textarea" 
+                                            placeholder="Questions, commentaires ou informations supplémentaires..."
+                                            rows="4"></textarea>
+                                <small class="form-help">Optionnel - 500 caractères maximum</small>
+                            </div>
+                        </fieldset>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary">Envoyer l'inscription</button>
+                            <button type="reset" class="btn btn-secondary">Réinitialiser</button>
+                        </div>
+                </section>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>LearnSite</h3>
+                    <p>Formations et ateliers pour étudiants en informatique</p>
+                </div>
+                <div class="footer-contact">
+                    <p><strong>Contact :</strong></p>
+                    <p>Email : contact@learnsite.ma</p>
+                    <p>Tél : +212 5 22 33 44 55</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 LearnSite - Tous droits réservés</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
